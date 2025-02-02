@@ -23,8 +23,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  background: linear-gradient(to top right, #ff7eb9, #ff65a3, #ff8c00); /* Soft pink and orange gradient */
-  background-image: url('https://www.transparenttextures.com/patterns/pw-maze.png'), linear-gradient(to top right, #ff7eb9, #ff65a3, #ff8c00); /* Add subtle texture with gradient */
+  background: linear-gradient(to top right, rgb(103, 103, 131), rgb(213, 213, 245), rgb(179, 179, 255)); /* Soft pink and orange gradient */
+  background-image: url('https://www.transparenttextures.com/patterns/pw-maze.png'), linear-gradient(to top right, lavender, lavender, rgb(112, 112, 161)); /* Add subtle texture with gradient */
   background-size: cover; /* Ensure background fully covers the screen */
   background-blend-mode: overlay; /* Blend the gradient with the texture */
   position: relative;
