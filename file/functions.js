@@ -127,47 +127,26 @@ function timeSince(date) {
         seconds: seconds
     };
 }
+function playVideoFromPoint() {
+    let video = document.getElementById("happycatvideo");
+  
+    // Set the start time (e.g., 5 seconds)
+
+  
+    // Start the video
+    video.play();
+    video.muted = true;
+    
+    // Enable looping once the video reaches the end
+    video.loop = true;
+  }
+  
+  // Call the function wherever you need to start the video
+
+  
 function timeElapse(date) {
     var current = new Date(); // Get the current date and time
-    var parsedDate = new Date(date); // Parse the input date string into a Date object
-
-    // // Calculate the difference in milliseconds
-    // var totalMilliseconds = current - parsedDate;
-
-    // // Calculate the total number of days, considering leap years
-    // var totalDays = Math.floor(totalMilliseconds / (1000 * 60 * 60 * 24));
-
-    // // Use Date objects to handle year, month, day, and time differences
-    // var years = current.getFullYear() - parsedDate.getFullYear();
-    // var months = current.getMonth() - parsedDate.getMonth();
-    // var days = current.getDate() - parsedDate.getDate();
-
-    // // Adjust months and years if current date is before the parsed date in the current year
-    // if (months < 0) {
-    //     months += 12;
-    //     years--;
-    // }
-
-    // // Adjust the days if the current day is before the parsed day in the current month
-    // if (days < 0) {
-    //     // Handle by calculating days from the last month
-    //     var previousMonth = new Date(current.getFullYear(), current.getMonth() - 1, 1);
-    //     days += new Date(previousMonth.getFullYear(), previousMonth.getMonth(), 0).getDate();
-    // }
-
-    // // Calculate hours, minutes, and seconds accurately
-    // var remainingTime = totalMilliseconds - (years * 365.25 * 24 * 60 * 60 * 1000 + months * 30 * 24 * 60 * 60 * 1000 + days * 24 * 60 * 60 * 1000);
-    
-    // var hours = Math.floor(remainingTime / (60 * 60 * 1000));
-    // remainingTime %= (60 * 60 * 1000);
-    // var minutes = Math.floor(remainingTime / (60 * 1000));
-    // remainingTime %= (60 * 1000);
-    // var seconds = Math.floor(remainingTime / 1000);
-
-    // // Adjust hours, minutes, and seconds to be 2 digits
-    // hours = (hours < 10) ? "0" + hours : hours;
-    // minutes = (minutes < 10) ? "0" + minutes : minutes;
-    // seconds = (seconds < 10) ? "0" + seconds : seconds;
+    var parsedDate = new Date(date); // Parse the input date string into a Date 
     const pastDate = new Date('2007-02-12T18:57:00')
     let timer = timeSince(pastDate)
     // Build the final result
@@ -184,6 +163,9 @@ function timeElapse(date) {
 
     // Update the UI
     document.getElementById("clock").innerHTML = result;
+    document.getElementById("ourchat").style.display = 'flex';
+    document.getElementById("happycat").style.display = 'flex';
+    playVideoFromPoint();
     // document.getElementById("clock").appendChild = result;
 
 }

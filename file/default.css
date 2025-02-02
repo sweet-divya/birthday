@@ -22,7 +22,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 100px;
+  background: linear-gradient(to top right, #ff7eb9, #ff65a3, #ff8c00); /* Soft pink and orange gradient */
+  background-image: url('https://www.transparenttextures.com/patterns/pw-maze.png'), linear-gradient(to top right, #ff7eb9, #ff65a3, #ff8c00); /* Add subtle texture with gradient */
+  background-size: cover; /* Ensure background fully covers the screen */
+  background-blend-mode: overlay; /* Blend the gradient with the texture */
+  position: relative;
+  height: auto;
 }
+
+#main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/bubbles.png'); /* Bubbles texture */
+  opacity: 0.3;
+  z-index: -1; /* Keep it behind content */
+}
+
 
 
 
@@ -42,7 +62,6 @@ body {
 #clock-box {
   font-size: 28px;
   display: none;
-  border: 2px solid red;
 }
 
 #clock-box a {
@@ -104,7 +123,6 @@ body {
   transition: all 1s;
   display: none;
   color: rgb(196, 255, 255);
-  font-size: 16px;
   line-height: 25px;
   font-size: larger;
   font-weight: bolder;
@@ -253,26 +271,94 @@ body {
 
 
 #ourchat {
-  width: 500px;
   height: 400px;
-  border: 2px solid red;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+  border-radius: 2px;
+  padding: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
+
+#ourchat img {
+  margin: 20px;
+  width: 900px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#ourchat img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#start {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 20px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#start:hover {
+  background: #3498db;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+#happycat {
+  display: none;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+  border-radius: 10px; /* Subtle rounded corners */
+  /* overflow: hidden; Prevent any overflowing content */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+}
+
+#happycatvideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fits the container */
+  border-radius: 5px; /* Round the corners of the video */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions for hover effect */
+}
+
+#happycatvideo:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  opacity: 0.9; /* Subtle fade effect on hover */
+}
+
+
+
 
 @media screen and (max-width: 1200px) {
   /* CSS rules for screens with max-width of 600px */
   body {
-    background-color: rgb(7, 1, 69);
+    background-color: white;
   }
 
   .digit {
     font-size: 64px;
+    display: block;
   }
 
   #clock {
 
     border-radius: 30px;
     width: 90vw;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -282,5 +368,11 @@ body {
     display: block;
     width: 100%;
     text-align: center;
+  }
+  #main {
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: auto;
+    overflow-x: hidden;
   }
 }
