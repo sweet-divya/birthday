@@ -14,17 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const username = document.getElementById("username").value;
         const password = passwordInput.value;
-
+        const name = username.toLowerCase()
         // Example authentication (replace with your own logic)
-        if (password === "12022007") {
-            // Store username in localStorage for later use
+        if(name === 'divya' && password === "12022007"){
             localStorage.setItem("username", username || "Guest");
 
             // Redirect to index.html after successful login
             window.location.href = "main.html";
-        } else {
-            alert("Incorrect password. Please try again.");
         }
+        else {
+            if(name !== 'divya'){
+                alert(`Sorry ${username} can't let you in 🥲, this is for someone special`);
+            }
+            else
+                alert("Incorrect password. Please try again.");
+        }
+        
     });
 
     // Function to greet user by username

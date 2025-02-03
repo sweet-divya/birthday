@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Happy Birthday Dear</title>
+    <link rel="stylesheet" href="./file/undefault.css">
+
+</head>
+
+<body>
+    <div id="main">
+        <!-- <div id="error">，<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>(<a href="http://firefox.com.cn/download/">Firefox</a>)</div> -->
+        <audio autoplay="autoplay" height="100" width="100" id="myAudio">
+            <source src="aud.mp3" type="audio/mp3" />
+            <embed height="100" width="100" src="aud.mp3" />
+        </audio>
+        <div id="block">
+            <button id="certi" onclick="redirectToCert()">Certificate</button>
+        </div>
+        <div id="clock-box">
+            <div id="message-box"></div>
+            <span></span>
+            <font color="#33CC00"></font>
+            <span></span>
+            <div id="clock"></div>
+        </div>
+        <div id="text">
+            <div id="code">
+                <span class="say"> Happiest Birthday 🎂 (don't forget to scroll down)</span><br>
+                <span class="say">My Sweetest Divya😻 </span><br>
+                <span class="say">I'm Just Too Lucky to have you. 🥹</span><br>
+                <span class="say">You Deserve all the LOVE🥰</span><br>
+                <span class="say">You're The Best💕</span><br>
+                <span class="say">You're Gorgeous😳</span><br>
+                <span class="say">You're Beautiful💐</span><br>
+                <span class="say">You're Precious💎</span><br>
+                <span class="say">You're My Favourite😸</span><br>
+                <span class="say">You're Rare🥹</span><br>
+                <span class="say">You're Pretty🧚</span><br>
+                <span class="say">You're Amazing💐</span><br>
+                <span class="say">You're Outstanding💎</span><br>
+                <span class="say">You're Wonderful😸</span><br>
+                <span class="say">You're Enough🥹</span><br>
+                <span class="say">You're Cutie Patooti🫶! </span><br>
+                <span class="say">You're my greatest support💪</span><br>
+                <span class="say">You're a true inspiration🌟</span><br>
+                <span class="say">Your kindness is unmatched❤️</span><br>
+                <span class="say">You're someone who makes life better🌿</span><br>
+                <span class="say">You're effortlessly amazing🌈</span><br>
+                <span class="say">You're the kind of person everyone should know💫</span><br>
+                <span class="say">Your smile makes everything brighter😊</span><br>
+                <span class="say">You're so full of grace and strength🌸</span><br>
+                <span class="say">You're a beautiful soul🌻</span><br>
+                <span class="say">You make everything feel possible✨</span><br>
+                <span class="say">You're an absolute joy to be around💛</span><br>
+                <span class="say">Your presence makes all the difference💖</span><br>
+                <span class="say">You're someone worth cherishing💎</span><br>
+                <span class="say">You inspire me to be better every day🌟</span><br>
+                <span class="say">You're an amazing person inside and out💫</span><br>
+
+                <span class="say"><span class="space"></span></font>
+
+                    </p>
+            </div>
+        </div>
+
+
+
+        <div id="ourchat">
+            <div id="start"> This is how i got a gem 💎 </div>
+            <img src="media/firsttext.jpg" alt="">
+        </div>
+        <div id="happycat">
+            <video id="happycatvideo" src="media/happyhappy.mp4"  muted></video>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
+<script src="file/certificate.js"></script>
+<script>
+    const pastDate = new Date('2007-02-12T18:57:00')
+    let timer = timeSince(pastDate)
+    // Build the final result
+    var result = `
+     <span class="digit" >THE WORLD JUST GOT LUCKIER FOR 🎊 :</span>
+
+        <span class="digit">${timer.years} Years</span> 
+        <span class="digit">${timer.months} Months</span> 
+        <span class="digit">${timer.days} Days</span>  
+        <span class="digit">${timer.hours} Hours</span> 
+        <span class="digit">${timer.minutes} Minutes</span> 
+        <span class="digit">${timer.seconds} Seconds</span> 
+    `;
+
+    // Update the UI
+    document.getElementById("clock").innerHTML = result;
+    function playAudio() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+    function playVideoFromPoint() {
+        let video = document.getElementById("happycatvideo");
+      
+        // Set the start time (e.g., 5 seconds)
+    
+      
+        // Start the video
+        video.play();
+        video.muted = true;
+        
+        // Enable looping once the video reaches the end
+        video.loop = true;
+      }
+      playVideoFromPoint()
+
+timeSince();
+</script>
+
+</html>

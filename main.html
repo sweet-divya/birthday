@@ -15,9 +15,11 @@
             <source src="aud.mp3" type="audio/mp3" />
             <embed height="100" width="100" src="aud.mp3" />
         </audio>
-
-        <div id="wrap">
-            <canvas id="canvas" width="1100" height="680"></canvas>
+        <div id="block">
+            <button id="certi" onclick="redirectToCert()">Certificate</button>
+            <div id="wrap">
+                <canvas id="canvas" width="1100" height="680"></canvas>
+            </div>
         </div>
         <div id="clock-box">
             <div id="message-box"></div>
@@ -73,7 +75,7 @@
             <img src="media/firsttext.jpg" alt="">
         </div>
         <div id="happycat">
-            <video id="happycatvideo" src="media/happyhappy.mp4" controls muted></video>
+            <video id="happycatvideo" src="media/happyhappy.mp4"  muted></video>
         </div>
     </div>
 
@@ -89,6 +91,7 @@
 <script type="text/javascript" src="./file/jscex-async-powerpack.min.js"></script>
 <script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
 <script type="text/javascript" src="./file/bday.js" charset="utf-8"></script>
+<script src="file/certificate.js"></script>
 <script>
     function playAudio() {
         var audio = document.getElementById("myAudio");

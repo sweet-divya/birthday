@@ -267,11 +267,39 @@ body {
   text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+#block{
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+}
+
+#certi{
+  height: 30px;
+  margin: 50px;
+  border: none;
+  padding: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 162, 252);
+    border-radius: 20px;
+    width: 200px;
+    font-family: cursive;
+    cursor: pointer;
+    border: 2px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+    transition: all 0.3s ease;  
+}
+#certi:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
 
 
 
 #ourchat {
-  height: 400px;
+  height: auto;
   display: none;
   justify-content: center;
   align-items: center;
@@ -286,7 +314,7 @@ body {
 #ourchat img {
   margin: 20px;
   width: 900px;
-  height: 400px;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
