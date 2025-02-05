@@ -165,7 +165,13 @@ function timeElapse(date) {
     document.getElementById("clock").innerHTML = result;
     document.getElementById("ourchat").style.display = 'flex';
     document.getElementById("happycat").style.display = 'flex';
-    document.getElementById("certi").style.display = 'flex';
+    setTimeout(()=>{
+        document.getElementById("certi").style.display = 'flex';
+    },2000)
+    document.getElementById("block").style.backgroundImage = "url('media/catbg.jpeg')";
+
+   
+
     playVideoFromPoint();
     // document.getElementById("clock").appendChild = result;
 

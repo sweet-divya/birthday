@@ -11,6 +11,9 @@
             text-align: center;
             padding: 20px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
         }
 
         h1 {
@@ -20,7 +23,6 @@
             border-radius: 10px;
             display: inline-block;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
             animation: pop 1s ease-in-out infinite alternate;
         }
 
@@ -37,6 +39,11 @@
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
+        .certificate-container img{
+            max-width: 800px;
+            margin: 20px 20px;
+        }
+        
 
         iframe {
             width: 100%;
@@ -46,9 +53,7 @@
         }
 
         .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            width: 200px;
             background: #ff5733;
             color: white;
             border: none;
@@ -63,6 +68,31 @@
         .back-btn:hover {
             background: #c70039;
         }
+        .download-btn {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Green Gradient */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .download-btn:hover {
+            background: linear-gradient(135deg, #66BB6A, #43A047); /* Lighter Green */
+            transform: scale(1.05); /* Slight Zoom */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    
+        .download-btn:active {
+            transform: scale(0.95); /* Press Effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -71,12 +101,21 @@
     <h1>🎉 Congratulations, Cutie Patooti! 🎉</h1>
 
     <div class="certificate-container">
-        <iframe src="media/certi.pdf"></iframe>
+        <img src="media/certiimg.jpg" alt="">
     </div>
+    <button class="download-btn" onclick="downloadFile()">📄 Download Certificate</button>
 
     <script>
         function goBack() {
             window.location.href = "retained.html";
+        }
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = 'media/certi.pdf';  // Path to your file
+            link.download = 'certi.pdf';   // Filename after download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 

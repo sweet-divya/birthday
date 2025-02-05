@@ -71,6 +71,7 @@ body {
 #canvas {
   width: 1100px;
   height: 680px;
+  
 }
 
 #clock {
@@ -272,7 +273,10 @@ body {
   width: 100%;
   display: flex;
   padding: 20px;
+  background: no-repeat center/cover;
+  background-blend-mode: multiply;
 }
+
 
 #certi{
   height: 30px;
@@ -390,6 +394,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
   }
 
   #clock span {
