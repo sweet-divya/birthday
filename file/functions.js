@@ -167,8 +167,9 @@ function timeElapse(date) {
     document.getElementById("happycat").style.display = 'flex';
     setTimeout(()=>{
         document.getElementById("certi").style.display = 'flex';
+        document.getElementById("bday-vid").style.display = 'flex';
     },2000)
-    document.getElementById("block").style.backgroundImage = "url('media/catbg.jpeg')";
+    document.getElementById("block").style.backgroundImage = "url('media/bdaybg.jpg')";
 
    
 

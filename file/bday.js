@@ -71,11 +71,11 @@
         }
     }
 
-    Seed = function (tree, point, scale, color) {
+    Seed = function (tree, point, scale, color='#895129') {
         this.tree = tree;
 
         var scale = scale || 1
-        var color = '#FFC0CB';
+        var color = '#895129';
 
         this.heart = {
             point: point,
@@ -121,7 +121,7 @@
         },
         drawHeart: function () {
             var ctx = this.tree.ctx, heart = this.heart;
-            var point = heart.point, color = heart.color,
+            var point = heart.point, color = '#c11c84' || heart.color,
                 scale = heart.scale;
             ctx.save();
             ctx.fillStyle = color;
@@ -153,7 +153,7 @@
         },
         drawText: function () {
             var ctx = this.tree.ctx, heart = this.heart;
-            var point = heart.point, color = heart.color,
+            var point = heart.point, color = '#c11c84',
                 scale = heart.scale;
             ctx.save();
             ctx.strokeStyle = color;
@@ -237,7 +237,7 @@
             var x = seed.x || this.width / 2;
             var y = seed.y || this.height / 2;
             var point = new Point(x, y);
-            var color = seed.color || '#FF0000';
+            var color = '#895129' || '#895129';
             var scale = seed.scale || 1;
 
             this.seed = new Seed(this, point, scale, color);

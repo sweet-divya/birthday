@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("username", username || "Guest");
 
             // Redirect to index.html after successful login
-            window.location.href = "main.html";
+            window.location.href = "CYyS4zDjZroX.html";
         }
         else {
             if(name !== 'divya'){

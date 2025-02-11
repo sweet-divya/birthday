@@ -17,6 +17,7 @@
         </audio>
         <div id="block">
             <button id="certi" onclick="redirectToCert()">Certificate</button>
+            <button id="bday-vid" onclick="redirectTobdayvid()">Cutie's Birthday</button>
         </div>
         <div id="clock-box">
             <div id="message-box"></div>
@@ -119,6 +120,9 @@
       playVideoFromPoint()
 
 timeSince();
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // This disables the right-click menu
+  });
 </script>
 
 </html>

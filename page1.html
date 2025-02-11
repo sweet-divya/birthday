@@ -112,11 +112,15 @@
         function downloadFile() {
             const link = document.createElement('a');
             link.href = 'media/certi.pdf';  // Path to your file
-            link.download = 'certi.pdf';   // Filename after download
+            link.download = 'certificate.pdf';   // Filename after download
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         }
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault(); // This disables the right-click menu
+            
+          });
     </script>
 
 </body>
