@@ -396,6 +396,16 @@ body {
   opacity: 0.9;
   /* Subtle fade effect on hover */
 }
+#amongus{
+  color: #070f15;
+  /* background: rgba(139, 31, 31, 0.2); */
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
@@ -434,5 +444,10 @@ body {
     /* Full height of the viewport */
     overflow: auto;
     overflow-x: hidden;
+  }
+  #certi,#bday-vid{
+    width: 50vw;
+    height: 100px;
+    font-size: larger ;
   }
 }

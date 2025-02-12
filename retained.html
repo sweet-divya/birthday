@@ -72,8 +72,12 @@
             <div id="start"> This is how i got a gem 💎 </div>
             <img src="media/firsttext.jpg" alt="">
         </div>
+        <div id="amongus">
+            <h1>Special Thanks To</h1>
+            <img src="media/amongus.png" alt="">
+        </div>
         <div id="happycat">
-            <video id="happycatvideo" src="media/happyhappy.mp4"  muted></video>
+            <video id="happycatvideo" src="media/happyhappy.mp4" muted></video>
         </div>
     </div>
 
@@ -84,9 +88,11 @@
 <script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
 <script src="file/certificate.js"></script>
 <script>
-    const pastDate = new Date('2007-02-12T18:57:00')
+    setInterval(()=>{
+        const pastDate = new Date('2007-02-12T18:57:00')
     let timer = timeSince(pastDate)
-    // Build the final result
+    // Build the final 
+    
     var result = `
      <span class="digit" >THE WORLD JUST GOT LUCKIER FOR 🎊 :</span>
 
@@ -100,29 +106,32 @@
 
     // Update the UI
     document.getElementById("clock").innerHTML = result;
+    },1000);
+    
     function playAudio() {
         var audio = document.getElementById("myAudio");
         audio.play();
     }
     function playVideoFromPoint() {
         let video = document.getElementById("happycatvideo");
-      
+
         // Set the start time (e.g., 5 seconds)
-    
-      
+
+
         // Start the video
         video.play();
         video.muted = true;
-        
+
         // Enable looping once the video reaches the end
         video.loop = true;
-      }
-      playVideoFromPoint()
-
-timeSince();
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault(); // This disables the right-click menu
-  });
+    }
+    playVideoFromPoint()
+    timeSince();
+    
+    document.addEventListener('contextmenu', function (event) {
+        event.preventDefault(); // This disables the right-click menu
+    });
+    
 </script>
 
 </html>

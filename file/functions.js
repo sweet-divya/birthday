@@ -5,7 +5,7 @@ var $win = $(window);
 var clientWidth = $win.width();
 var clientHeight = $win.height();
 
-$(window).resize(function() {
+$(window).resize(function () {
     var newWidth = $win.width();
     var newHeight = $win.height();
     if (newWidth != clientWidth && newHeight != clientHeight) {
@@ -13,26 +13,26 @@ $(window).resize(function() {
     }
 });
 
-(function($) {
-	$.fn.typewriter = function() {
-		this.each(function() {
-			var $ele = $(this), str = $ele.html(), progress = 0;
-			$ele.html('');
-			var timer = setInterval(function() {
-				var current = str.substr(progress, 1);
-				if (current == '<') {
-					progress = str.indexOf('>', progress) + 1;
-				} else {
-					progress++;
-				}
-				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
-				if (progress >= str.length) {
-					clearInterval(timer);
-				}
-			}, 75);
-		});
-		return this;
-	};
+(function ($) {
+    $.fn.typewriter = function () {
+        this.each(function () {
+            var $ele = $(this), str = $ele.html(), progress = 0;
+            $ele.html('');
+            var timer = setInterval(function () {
+                var current = str.substr(progress, 1);
+                if (current == '<') {
+                    progress = str.indexOf('>', progress) + 1;
+                } else {
+                    progress++;
+                }
+                $ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+                if (progress >= str.length) {
+                    clearInterval(timer);
+                }
+            }, 75);
+        });
+        return this;
+    };
 })(jQuery);
 
 // function timeElapse(date) {
@@ -85,7 +85,7 @@ function timeSince(date) {
     if (!(date instanceof Date)) {
         throw new Error("Invalid date input");
     }
-    
+
     let years = nowInIST.getFullYear() - dateInIST.getFullYear();
     let months = nowInIST.getMonth() - dateInIST.getMonth();
     let days = nowInIST.getDate() - dateInIST.getDate();
@@ -129,28 +129,30 @@ function timeSince(date) {
 }
 function playVideoFromPoint() {
     let video = document.getElementById("happycatvideo");
-  
+
     // Set the start time (e.g., 5 seconds)
 
-  
+
     // Start the video
     video.play();
     video.muted = true;
-    
+
     // Enable looping once the video reaches the end
     video.loop = true;
-  }
-  
-  // Call the function wherever you need to start the video
+}
 
-  
+// Call the function wherever you need to start the video
+
+
 function timeElapse(date) {
     var current = new Date(); // Get the current date and time
     var parsedDate = new Date(date); // Parse the input date string into a Date 
     const pastDate = new Date('2007-02-12T18:57:00')
-    let timer = timeSince(pastDate)
-    // Build the final result
-    var result = `
+    async function updateTime() {
+
+        let timer = timeSince(pastDate)
+        // Build the final result
+        var result = `
      <span class="digit" >THE WORLD JUST GOT LUCKIER FOR 🎊 :</span>
 
         <span class="digit">${timer.years} Years</span> 
@@ -161,19 +163,24 @@ function timeElapse(date) {
         <span class="digit">${timer.seconds} Seconds</span> 
     `;
 
-    // Update the UI
-    document.getElementById("clock").innerHTML = result;
+
+        // Update the UI
+        document.getElementById("clock").innerHTML = result;
+    }
     document.getElementById("ourchat").style.display = 'flex';
     document.getElementById("happycat").style.display = 'flex';
-    setTimeout(()=>{
+    setTimeout(() => {
         document.getElementById("certi").style.display = 'flex';
         document.getElementById("bday-vid").style.display = 'flex';
-    },2000)
+        document.getElementById("amongus").style.display = 'flex';
+    }, 2000)
     document.getElementById("block").style.backgroundImage = "url('media/bdaybg.jpg')";
 
-   
+
 
     playVideoFromPoint();
+    updateTime();
+
     // document.getElementById("clock").appendChild = result;
 
 }
