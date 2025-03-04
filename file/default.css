@@ -24,7 +24,7 @@ body {
   align-items: center;
   gap: 100px;
   
-  background-image: url('/media/beach.jpg');
+  background-image: url('beach.jpg');
   
   /* Soft pink and orange gradient */
   
