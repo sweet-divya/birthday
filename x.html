@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            opacity: 0;
+            font-size: 5rem;
+            animation: fadein 4s ease-in-out 2s forwards;
+        }
+
+        span {
+            color: white;
+            opacity: 0;
+            animation: fadein 8s ease-in-out 4s forwards;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <h1>I HATE YOUR KIND</h1>
+        <span>Hope you're having fun</span>
+    </div>
+</body>
+
+</html>
